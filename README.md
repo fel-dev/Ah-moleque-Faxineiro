@@ -1,2 +1,3 @@
-# AML4-beta-v.4
+# AML4-1.0-alpha
+Ah moleque limpador v.1 alpha
 script simples baseado no CCleaner (porém incrivelmente leve e somente) para limpeza diária do computador.
