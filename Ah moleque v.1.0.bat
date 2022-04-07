@@ -1,4 +1,5 @@
 REM @ SCRIPT PARA ELIMINAÇÃO DE ARQUIVOS TEMPORÁRIOS
+REM @echo off
 mode 60,13
 color 1a
 taskkill /F /IM "ccleaner64.exe"
@@ -167,7 +168,8 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile
 
 @echo Limpeza de disco e limpeza de pastas temporárias: CONCLUIDOS
 @echo Executando lista de programas osciosos.
-%windir%\system32\rundll32.exe advapi32.dll,ProcessIdleTasks
+rem essa merda não funciona -- travando aqui!!!
+rem %windir%\system32\rundll32.exe advapi32.dll,ProcessIdleTasks
 
 
 @echo    *****************************************************
