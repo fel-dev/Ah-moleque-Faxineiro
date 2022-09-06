@@ -1,14 +1,15 @@
 rem Uma breve explicacao sobre os comandos: o CLS limpa a tela, o ECHO mostra as mensagens na tela, GOTO vai para a opção desejada, lembrando que a opcao aparece com os : (dois pontos), COLOR altera as cores do prompt de comando. O PAUSE dá um break na tela aguardando apertar qualquer tecla. O comando SET aguarda teclar uma opcao estipulada pelo comando IF. Estes são os comandos basicos usados em um arquivo de lote. O parametro EQU utilizado no IF, se refere a comparação de igualdade (=). O parametro GEQ se for igual ou maior a opcao selecionada. Para o backup utilizei o XCOPY, pois diferente do comando copy, este copia diretorios e subdiretorios. As outras opcoes, foi utilizado o comando CHDSK, que é o comando interno do sistema e que checa o disco contra erros. O  CONTROL.EXE abre o painel de controle, DATE /t mostra a data atual, $COMPUTERNAME$, mostra o nome do computador e $USERNAME$ o nome do usuario logado.
-@echo off
+
 echo off
-
 :menu
-
 color 0E
 mode 90,45
 
+echo.
+CertUtil -hashfile "AMCleaner v.2.1.bat"
+echo.
 
-echo Programa: Ah, Moleque Cleaner!     2021 Desenvolvedor: Felipe Correa Carneiro
+echo Programa: Ah, Moleque Cleaner!     Desenvolvedor: Felipe Correa Carneiro
 echo Computador: %computername%		Usuario: %username%
 time /t
 date /t
@@ -37,17 +38,14 @@ echo *    8. Painel de Controle; e                                        *
 echo *    9. Sair.                                                        *
 echo *____________________________________________________________________*
 echo notas
-echo * recomendado opcao 2 (bkp), em seguida opcao 1(temp files) e por ultimo, opcao 7 (repair tools).
+echo * recomendado opção 2 (bkp), em seguida opção 1(temp files) e por último, opção 7 (repair tools).
 echo 1 - Os navegadores abertos serão automaticamente fechados;
 echo 2 - O arquivo final sera enviado para Area de Trabalho deste computador;
 echo 3 - O processo pode demorar dependendo do tamanho do disco e dos erros que possam sar encontrados. (esse comando nao repara bad block). Dica: se estiver usando notebook conecte o carregador, pois ele pode desligar durante o processo. Outro detalhe muito importante, nao INTERROMPA esse verificacao, ou isso pode ocasionar mais problemas.
 echo 4 - duracao: ~20 minutos
 echo 5 - Esse comando repara arquivos corrompidos ou ausentes do sistema operacional garantindo que todos os erros sejam corrigidos, e que seu sistema fique rodando liso.
 echo _______________________________________________________________________ 
-echo. 
-echo.
-CertUtil -hashfile "AMCleaner v.2.0.bat"
-echo.
+
 REM =============CONFIGURACAO DAS OPCOES===============================================================================================================================================
 
 
@@ -597,27 +595,19 @@ echo *----------------------------*
 :opcao7
 cls
 
-//DISM.exe /Online /Cleanup-image /ScanHealth
-//DISM.exe /Online /Cleanup-image /CheckHealth
+DISM.exe /Online /Cleanup-image /ScanHealth
+DISM.exe /Online /Cleanup-image /CheckHealth
 DISM.exe /Online /Cleanup-image /SpSuperseded
 DISM.exe /Online /Cleanup-image /StartComponentCleanup
 DISM.exe /Online /Cleanup-image /RestoreHealth
 
-net stop bits
-net stop wuauserv
-net stop appidsvc
-net stop cryptsvc
-Del "%ALLUSERSPROFILE%\Application Data\Microsoft\Downloader\qmgr*.dat"
-Del c:\Windows\SoftwareDistribution /f
+
 sc.exe sdset bits D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)
 sc.exe sdset wuauserv D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)   
-cd /d %windir%\system32
+
+net stop wuauserv
 esentutl /d %windir%\softwaredistribution\datastore\datastore.edb
-red delete "HKLM\software\Microsoft\Windows\WndowsUpdate" /f
-reg delete HKLM\COMPONENTS\PendingXmlIdentifier /f
-reg delete HKLM\COMPONENTS\NextQueueEntryIndex" /f
-red delet "HKLM\COMPONENTS\AdvancedInstallersNeedResolviong" /f
-del %TEMP%\*.* /s /f /q *.*
+net start wuauserv
 
 echo *-----------------------------*
 echo   Reparo Recomandado concluído
