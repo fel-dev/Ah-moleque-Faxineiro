@@ -6,7 +6,7 @@ color 0E
 mode 90,45
 
 echo.
-CertUtil -hashfile "AMCleaner v.2.0.bat"
+CertUtil -hashfile "AMCleaner v.2.1.bat"
 echo.
 
 echo Programa: Ah, Moleque Cleaner!     Desenvolvedor: Felipe Correa Carneiro
