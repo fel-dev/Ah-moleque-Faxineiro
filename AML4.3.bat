@@ -1,185 +1,38 @@
 @echo off 
-@echo. off 
+@echo. off
+set /a conclusao=0
+goto Interface
 
-set /a conclusao=0  
-set /a barra= 
+:parte1
+echo parte 1
+taskkill /F /IM "ccleaner64.exe"
+call :Interface
 
-TITLE Ah, Moleque! Cleaner. 4.1 versaoBETA MODO RAPIDO  
+:parte2
+echo parte 2
+taskkill /F /IM "ccleaner.exe"
+call :Interface
 
-mode 73,21
-rem descomentar linha abaixo para voltar ao padrão
-rem mode 71,38
-color 0
-
-CLS
-
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t                                          
-msg * Aviso! Caso haja, os navegadores serao fechados automaticamente.
-
-taskkill /F /IM "ccleaner64.exe" 
-
-echo ******************** Fechando ccleaner ********************
-rem Simplesmente fecha a tarefa cclenaer
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo.
-
-taskkill /F /IM "ccleaner.exe" 
-
-
-echo ******************** WINDOWS ********************
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
+:parte3
+echo parte%conclusao%
 REM Apaga todas as pastas temporárias e arquivos temporários do usuário 
-del /q /f /s %tmp%
-
+del /q /f /s %tmp%  
 takeown /A /R /D Y /F C:\Users\%USERNAME%\AppData\Local\Temp\ 
-
 ica C:\Users\%USERNAME%\AppData\Local\Temp\ /grant administradores:F /T /C 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Temp\ 
 md C:\Users\%USERNAME%\AppData\Local\Temp\  
-
 del /q /f /s C:\Windows\Prefetch 
 
+:parte%conclusao%
 REM Apaga os arquivos de \Windows\Temp
 takeown /A /R /D Y /F C:\windows\temp  
-ica C:\windows\temp /grant administradores:F /T /C
+ica C:\windows\temp /grant administradores:F /T /C  
 rmdir /q /s c:\windows\temp  
 md c:\windows\temp  
+call :Interface
 
 
-
-
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-echo.
-echo NAO APAGA ARQUIVOS DE LOG
-rem pause
-goto naoApagaLogs
-
-
-REM Apaga arquivos de log
-del c:\windows\logs\cbs\*.log  
-del C:\Windows\Logs\MoSetup\*.log  
-
-del C:\Windows\Panther\*.log /s /q  
-del C:\Windows\inf\*.log /s /q  
-del C:\Windows\logs\*.log /s /q  
-cls
-echo aguarde
-del C:\Windows\SoftwareDistribution\*.log /s /q  
-echo aguarde
-del C:\Windows\Microsoft.NET\*.log /s /q  
-echo aguarde
-del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\WebCache\*.log /s /q  
-
-del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\SettingSync\*.log /s /q  
-echo aguarde
-del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*.tmp /s /q  
-echo aguarde
-del C:\Users\%USERNAME%\AppData\Local\Microsoft\"Terminal Server Client"\Cache\*.bin /s /q  
-echo aguarde
-rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\INetCache\  
-
-
-
-:naoApagaLogs
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-rem goto pularEdge
+:parte%conclusao%
 echo ******************** EDGE ********************
 taskkill /F /IM "msedge.exe"  
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\Default\Cache\data*.  
@@ -200,29 +53,10 @@ echo aguarde
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\ShaderCache\GPUCache\  
 echo aguarde
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\Default\Storage\ext\  
+call :Interface
 
 
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Cache\data*.  
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Cache\f*.  
@@ -235,29 +69,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profil
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\GPUCache\  
 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Storage\ext\  
+call :Interface
 
 
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\Cache\data*.  
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\Cache\f*.  
@@ -270,36 +85,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profil
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\"Service Worker"\ScriptCache\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\GPUCache\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\Storage\ext\  
+call :Interface
 
 
-
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-:pularEdge
-
-
+:parte%conclusao%
 echo ******************** FIREFOX ********************
 taskkill /F /IM "firefox.exe"  
 REM define qual é a pasta Profile do usuário e apaga os arquivos temporários dali
@@ -313,36 +102,10 @@ del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\cache2\i
 
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\startupCache\*.little  
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\cache2\*.log /s /q  
+call :Interface
 
 
-
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-
+:parte%conclusao%
 echo ******************** VIVALDI ********************
 taskkill /F /IM "vivaldi.exe"
 del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\Cache\data*.
@@ -356,36 +119,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\GPUCac
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\GrShaderCache\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\ShaderCache\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\Storage\ext\
+call :Interface
 
 
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-
-
+:parte%conclusao%
 del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\Cache\data*.
 del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\Cache\f*.
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\"Service Worker"\Database\
@@ -393,36 +130,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\"S
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\"Service Worker"\ScriptCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 1"\Storage\ext\
+call :Interface
 
 
-
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-
+:parte%conclusao%
 del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\Cache\data*.
 del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\Cache\f*.
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\"Service Worker"\Database\
@@ -430,36 +141,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\"S
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\"Service Worker"\ScriptCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\"Profile 2"\Storage\ext\
+call :Interface
 
 
-
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-
+:parte%conclusao%
 echo ******************** BRAVE ********************
 taskkill /F /IM "brave.exe"
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\Cache\data*.
@@ -474,34 +159,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\ShaderCache\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\Storage\ext\
 
+call :Interface
 
 
-
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 1"\Cache\data*.
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 1"\Cache\f*.
@@ -512,33 +173,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 1"\Storage\ext\
 
 
+call :Interface
 
 
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 2"\Cache\data*.
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 2"\Cache\f*.
@@ -549,34 +187,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\"Profile 2"\Storage\ext\
 
 
+call :Interface
 
 
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
-
+:parte%conclusao%
 echo ******************** CHROME ********************
 taskkill /F /IM "chrome.exe"
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\Cache\data*.  
@@ -592,33 +206,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\ShaderCa
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\Storage\ext\  
 
 
+call :Interface
 
 
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo. 
-
-
-
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 1"\Cache\data*.  
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 1"\Cache\f*.  
@@ -629,34 +220,10 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 1"\Storage\ext\  
 
 
+call :Interface
 
 
-
-CLS
-set barra=%barra%__
-set /a conclusao=%conclusao%+5  
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-echo. 
-echo.
-time /t
-date /t 
-echo. 
-echo.                                          
-echo.
-echo %barra% %conclusao%%% Concluido... 
-echo.
-echo.
-echo.
-echo. 
-
-
-
-
+:parte%conclusao%
 
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 2"\Cache\data*.  
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 2"\Cache\f*.  
@@ -667,32 +234,33 @@ rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\"Profile 2"\Storage\ext\   
 
 
+call :Interface
 
-CLS
-set  barra=%barra%__ 
-set /a conclusao=%conclusao%+9,9  
-echo ======================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ======================================================================
-echo.
-echo     Usuario logado: %username%       Computador: %computername%	
-time /t
-date /t 
+
+:parte%conclusao%
 echo  +---------------------------------------------------------------------+
 echo  [          Espere a conclusao da Limpeza de disco , isso pode demorar ]                                 
 echo  [ alguns minutos dependendo da situacao de cada computador.*          ]
 echo  +---------------------------------------------------------------------+
 echo                 [voce sera notificado ao fim da limpeza]
 echo. 
-echo  *Caso demore mais de 60 minutos, feche o programa e tente novamente.             
-echo  ______%barra% %conclusao%%% Concluido... 
+echo  *Caso demore mais de 60 minutos, feche o programa e tente novamente.
 cleanmgr.exe /sagerun:n  
+call :Interface
 
 
+:parte%conclusao%
+
+call :Interface
 
 
-CLS
+:parte%conclusao%
+
+call :Interface
+
+
+:parte%conclusao%
+cls
 echo ====================================================================
 echo                   P R O G R A M A : A M C L E A N E R
 echo                      dev: Felipe Correa Carneiro
@@ -707,11 +275,39 @@ echo #       # #     # #     #       #       # #      #      # #     # #
 echo  ##      #      # #      ##     ###     ###     ###     ##       #  
 echo =====================================================================
 echo.
-CertUtil -hashfile "AML VER 0.4.2.bat"
-CertUtil -hashfile "AML VER 0.4.2.bat">"Hash_AML VER 0.4.2.txt"
-echo Hash do programa salvo automaticamente com sucesso em "../hash_AML VER 0.4.2.txt"
+CertUtil -hashfile "AML4.3.bat"
+CertUtil -hashfile "AML4.3.bat">"hash_AML4.3_beta.txt"
+echo Hash do programa salvo com sucesso automaticamente em "../hash_AML BETA AMCver.4.1_beta.txt"
 echo.
 echo Precione qualquer tecla para fechar.
 set fim_txt=Faxina realizada com sucesso!
 MSG * %fim_txt% 
-PAUSE
+pause
+exit
+
+
+
+
+
+
+
+
+
+
+:Interface
+CLS
+echo ====================================================================
+echo                   P R O G R A M A : A M C L E A N E R
+echo                      dev: Felipe Correa Carneiro
+echo ====================================================================
+echo.
+echo     Usuario logado: %username%       Computador: %computername%	
+time /t
+date /t
+
+echo %conclusao%%% conclusao...
+set /a conclusao=%conclusao%+1
+
+
+if %conclusao% equ 1 goto parte%conclusao%
+if %conclusao% equ 2 goto parte%conclusao%
