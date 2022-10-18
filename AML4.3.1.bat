@@ -275,10 +275,9 @@ echo #       # #     # #     #       #       # #      #      # #     # #
 echo  ##      #      # #      ##     ###     ###     ###     ##       #  
 echo =====================================================================
 echo.
-CertUtil -hashfile "AML4.3.bat"
-CertUtil -hashfile "AML4.3.bat">"hash_AML4.3_beta.txt"
-echo Hash do programa salvo com sucesso automaticamente em "../hash_AML BETA AMCver.4.1_beta.txt"
-echo.
+CertUtil -hashfile "./AML4.3.1.bat"
+CertUtil -hashfile "./AML4.3.1.bat">"hash AML beta 431.txt"
+msg * Hash do arquivo salvo com sucesso em "../hash_AMC431beta.txt"
 echo Precione qualquer tecla para fechar.
 set fim_txt=Faxina realizada com sucesso!
 MSG * %fim_txt% 
@@ -309,5 +308,4 @@ echo %conclusao%%% conclusao...
 set /a conclusao=%conclusao%+1
 
 
-if %conclusao% equ 1 goto parte%conclusao%
-if %conclusao% equ 2 goto parte%conclusao%
+if %conclusao% equ %conclusao% goto parte%conclusao%
