@@ -2,7 +2,12 @@
 
 Ah Moleque Cleaner
 
-script simples focado em limpeza diária/semanal/mensal do sistema operacional/parte física do HD 
+About
+Based on a simple script, it refers to the origins of Ccleaner -- lightweight, effective and focused entirely on daily computer cleaning. 
+NOTE: Unnecessary for those who use SSD.
+
+Sobre
+Baseia-se em um script simples, remete-se as origens do Ccleaner -- leve, eficaz e focado inteiramente na limpeza diária do computador.
 
 OBS: desnecessário para quem usa SSD.
 
