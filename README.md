@@ -2,11 +2,11 @@
 
 ## Ah Moleque Cleaner
 
-Source code github page: https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro
+Source code [GitHub Page's](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro)
   
-Developer's [LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev)
+[LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev) Developer's 
 
-[[Download here](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)]
+It is forever for free: [[Download Now](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)]
 
 Sobre|About
 :---|:---
