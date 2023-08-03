@@ -17,28 +17,29 @@ Based on a simple script, it refers to the origins of Ccleaner -- lightweight, e
 ## Binary
 File | SHA-256
 :-- | :--
-[Ah-moleque-Faxineiro-main.zip](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 7a7af2530f5b094fa27f3899d48b886393f7f1e8fd29f7da3dd51bd506e90ca1
+[AML4.3.1.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 3a4ec6d64cf282bd3a43d83786094e594cceb260eade78ca787a95498de945df
 
 ### Notes: **Remember to check the SHA-256 hash**
 
 ### Instructions
-Para utilizar:
+To use:
 
-1. Clique com o botão direito do mouse no arquivo "AML4.3.1";
-2. Selecione a opção "Executar como administrador";
-3. Aguarde até o fim da limpeza.
+1. Right-click on the file “AML4.3.1”;;
+2. Select the option “Run as administrator”;
+3. Wait until the end of the cleaning.
 
-Obrigado por utilizar! 
+Thank you for using!
 
-Se gostou do meu trabalho e quiser deixar uma contribuição
+If you liked my work and want to leave a contribution
 - PayPal: https://www.paypal.com/donate/?hosted_button_id=HSG8AZQ93493S 
-- PIX: 21 98366-1521 
+- PIX: 21965550012
 
-Se tiver alguma dúvida fale comigo:
-https://fel-dev.github.io/Projetos/#contato
+If you have any questions or need help, please [contact me](https://fel-dev.github.io/Projetos/#contato). I am open to feedback and suggestions ☺
+
+
 
 ### Source code
-AML's source code is maintained on both Github. Follow the url bellow to clone the git repository.
+AML's source code is maintained on Github. Follow the url bellow to clone the git repository.
 
     git clone https://github.com/fel-dev/Ah-moleque-Faxineiro.git
 
@@ -47,6 +48,8 @@ AML's source code is maintained on both Github. Follow the url bellow to clone t
 | :--- |
 | [Source code](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro)  |
 | [My LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev) |
-| Ah Moleque Cleaner: [Download Now](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip) <br> It is forever for free|
+| [Ah Moleque Cleaner - Auto Download](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)
 
-2023 - Felipe Carneiro Dev
+It's alweys free. Enjoy!
+
+2023 - Felipe Carneiro

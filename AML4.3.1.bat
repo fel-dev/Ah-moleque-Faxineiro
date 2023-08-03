@@ -1,19 +1,22 @@
 @echo off 
 @echo. off
+
+set fim_txt=Faxina realizada com sucesso!
 set /a conclusao=0
+
 goto Interface
 
 :parte1
-echo parte 1
+echo parte %conclusao%
 taskkill /F /IM "ccleaner64.exe"
 call :Interface
 
-:parte2
-echo parte 2
+:parte%conclusao%
+echo parte %conclusao%
 taskkill /F /IM "ccleaner.exe"
 call :Interface
 
-:parte3
+:parte%conclusao%
 echo parte%conclusao%
 REM Apaga todas as pastas temporárias e arquivos temporários do usuário 
 del /q /f /s %tmp%  
@@ -259,6 +262,7 @@ call :Interface
 call :Interface
 
 
+
 :parte%conclusao%
 cls
 echo ====================================================================
@@ -275,13 +279,15 @@ echo #       # #     # #     #       #       # #      #      # #     # #
 echo  ##      #      # #      ##     ###     ###     ###     ##       #  
 echo =====================================================================
 echo.
-CertUtil -hashfile "./AML4.3.1.bat"
-CertUtil -hashfile "./AML4.3.1.bat">"hash AML beta 431.txt"
-msg * Hash do arquivo salvo com sucesso em "../hash_AMC431beta.txt"
+
+CertUtil -hashfile "./AML4.3.1.bat" sha256
+CertUtil -hashfile "./AML4.3.1.bat" sha256>"hash AML beta 431.txt"
+echo.
+echo Hash do arquivo salvo com sucesso em "../SHA256_AMC4.3.1[beta].txt"
+echo.
 echo Precione qualquer tecla para fechar.
-set fim_txt=Faxina realizada com sucesso!
-MSG * %fim_txt% 
-pause
+echo.
+MSG * %fim_txt%
 exit
 
 
@@ -296,8 +302,8 @@ exit
 :Interface
 CLS
 echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
+echo                          A M  C L E A N E R
+echo                     developed: Felipe Correa Carneiro
 echo ====================================================================
 echo.
 echo     Usuario logado: %username%       Computador: %computername%	
