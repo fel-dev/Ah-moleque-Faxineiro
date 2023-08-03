@@ -9,11 +9,13 @@ goto Interface
 :parte1
 echo parte %conclusao%
 taskkill /F /IM "ccleaner64.exe"
+
 call :Interface
 
 :parte%conclusao%
 echo parte %conclusao%
 taskkill /F /IM "ccleaner.exe"
+
 call :Interface
 
 :parte%conclusao%
@@ -31,7 +33,8 @@ REM Apaga os arquivos de \Windows\Temp
 takeown /A /R /D Y /F C:\windows\temp  
 ica C:\windows\temp /grant administradores:F /T /C  
 rmdir /q /s c:\windows\temp  
-md c:\windows\temp  
+md c:\windows\temp 
+
 call :Interface
 
 
@@ -60,7 +63,6 @@ call :Interface
 
 
 :parte%conclusao%
-
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Cache\data*.  
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Cache\f*.  
 
@@ -68,6 +70,7 @@ del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\Cac
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\"Service Worker"\Database\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\"Service Worker"\CacheStorage\  
 cls
+:parte%conclusao%
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\"Service Worker"\ScriptCache\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 1"\GPUCache\  
 
@@ -83,6 +86,7 @@ del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\Cac
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\Cache\index.  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\"Service Worker"\Database\  
 cls
+:parte%conclusao%
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\"Service Worker"\CacheStorage\  
 
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Microsoft\Edge\"User Data"\"Profile 2"\"Service Worker"\ScriptCache\  
@@ -100,6 +104,7 @@ for /f "tokens=*" %%a in ('"dir /b "%parentfolder%"|findstr ".*\.default-release
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\cache2\entries\*.  
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\startupCache\*.bin  
 cls
+:parte%conclusao%
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\startupCache\*.lz*  
 del C:\Users\%USERNAME%\AppData\local\Mozilla\Firefox\Profiles\%folder%\cache2\index*.*  
 
@@ -117,6 +122,7 @@ del C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\Cache\index.
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\"Service Worker"\Database\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\"Service Worker"\CacheStorage\
 cls
+:parte%conclusao%
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\"Service Worker"\ScriptCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\Default\GPUCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Vivaldi\"User Data"\GrShaderCache\GPUCache\
@@ -155,6 +161,7 @@ del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\De
 del C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\Cache\index.
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\"Service Worker"\Database\
 cls
+:parte%conclusao%
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\"Service Worker"\CacheStorage\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\"Service Worker"\ScriptCache\
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\BraveSoftware\Brave-Browser\"User Data"\Default\GPUCache\
@@ -201,6 +208,7 @@ del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\Cache\f*
 del C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\Cache\index.  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\"Service Worker"\Database\  
 cls
+:parte%conclusao%
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\"Service Worker"\CacheStorage\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\"Service Worker"\ScriptCache\  
 rmdir /q /s C:\Users\%USERNAME%\AppData\Local\Google\Chrome\"User Data"\Default\GPUCache\  
@@ -246,32 +254,42 @@ echo  [          Espere a conclusao da Limpeza de disco , isso pode demorar ]
 echo  [ alguns minutos dependendo da situacao de cada computador.*          ]
 echo  +---------------------------------------------------------------------+
 echo                 [voce sera notificado ao fim da limpeza]
-echo. 
-echo  *Caso demore mais de 60 minutos, feche o programa e tente novamente.
+echo.
+echo  Notas:
+echo  Se for a primeira vez de uso. Pode demorar bastante tempo.
+echo  A tela pode parecer congelada algumas vezes.
+echo  Se esse for o caso: aguarde 30 minutos e tente novamente
+echo.
 cleanmgr.exe /sagerun:n  
 call :Interface
 
 
 :parte%conclusao%
-
+pause
+echo teste interface
+pause
 call :Interface
 
 
 :parte%conclusao%
-
+pause
+echo teste interface
+pause
 call :Interface
 
 
 
 :parte%conclusao%
-cls
+CLS
 echo ====================================================================
 echo                   P R O G R A M A : A M C L E A N E R
 echo                      dev: Felipe Correa Carneiro
 echo ====================================================================
 echo     Usuario logado: %username%       Computador: %computername%	
+echo.	
 time /t
-date /t                                                           
+date /t
+echo.                                                          
 echo  ##      #      ###      ##     #       # #     ###     ##       #  
 echo #       # #     # #     #       #       # #      #      # #     # # 
 echo #       # #     # #     #       #       # #      #      # #     # # 
@@ -281,13 +299,14 @@ echo =====================================================================
 echo.
 
 CertUtil -hashfile "./AML4.3.1.bat" sha256
-CertUtil -hashfile "./AML4.3.1.bat" sha256>"hash AML beta 431.txt"
+rem CertUtil -hashfile "./AML4.3.1.bat" sha256>"SHA256_AMC4.3.1[beta].txt"
 echo.
 echo Hash do arquivo salvo com sucesso em "../SHA256_AMC4.3.1[beta].txt"
 echo.
 echo Precione qualquer tecla para fechar.
 echo.
 MSG * %fim_txt%
+pause
 exit
 
 
@@ -306,11 +325,16 @@ echo                          A M  C L E A N E R
 echo                     developed: Felipe Correa Carneiro
 echo ====================================================================
 echo.
-echo     Usuario logado: %username%       Computador: %computername%	
+echo     Usuario logado: %username%       Computador: %computername%
+echo.	
 time /t
 date /t
-
-echo %conclusao%%% conclusao...
+echo.
+echo  Nota:
+echo  A tela pode parecer congelada algumas vezes.
+echo.
+echo                             %conclusao%%%
+echo.
 set /a conclusao=%conclusao%+1
 
 
