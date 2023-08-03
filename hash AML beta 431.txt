@@ -1,3 +1,0 @@
-SHA1 hash de ./AML4.3.1.bat:
-72f2a3da4b58abc97267c89a9f21e38e553d1d3b
-CertUtil: -hashfile : comando concluído com êxito.
