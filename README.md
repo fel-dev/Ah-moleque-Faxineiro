@@ -1,6 +1,6 @@
-### AMC - BETA
+### EasyCleanMate BETA
 
-# Ah Moleque Cleaner
+_old Ah Moleque Limpador BETA_
 
 Sumary
  - Apresentation
