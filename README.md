@@ -7,7 +7,7 @@ Sumary
  - [Binary](#binary)
  - [Instructions](#instructions)
  - [Source Code](#source-code)
- - [More](#More)
+ - [More links](#more-links)
 
 ## Presentation 
 
@@ -45,13 +45,13 @@ AML's source code is maintained on Github. Follow the url bellow to clone the gi
 
     git clone https://github.com/fel-dev/Ah-moleque-Faxineiro.git
 
+## More links
 
 | More |
 | :--- |
 | [Releases](https://github.com/fel-dev/EasyCleanMate/releases)|
 | [Source code](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro)  |
 | [My LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev) |
-| [Ah Moleque Cleaner - Auto Download](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)
 
 It's alweys free. Enjoy!
 
