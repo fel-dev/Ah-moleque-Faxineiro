@@ -17,7 +17,7 @@ Based on a simple script, it refers to the origins of Ccleaner -- lightweight, e
 ## Binary
 File | SHA-256
 :-- | :--
-[AML4.3.1.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 3a4ec6d64cf282bd3a43d83786094e594cceb260eade78ca787a95498de945df
+[AML4.3.1.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 89da241e522e08ada1c0a975bfb8152d7b13a0025e8d9189fc4b76ecc041e064
 
 ### Notes: **Remember to check the SHA-256 hash**
 
