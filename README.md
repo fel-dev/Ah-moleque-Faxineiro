@@ -3,13 +3,13 @@
 _old Ah Moleque Limpador BETA_
 
 Sumary
- - [Apresentation](#Apresentation)
- - [Binary](#Binary)
- - [Instructions](#Instructions)
- - [Source Code](#Source)
+ - [presentation](#presentation)
+ - [Binary](#binary)
+ - [Instructions](#instructions)
+ - [Source Code](#source-code)
  - [More](#More)
 
-## Apresentation 
+## Presentation 
 
 | About|Sobre (pt-BR) |
 | :---|:--- |
