@@ -298,8 +298,8 @@ echo  ##      #      # #      ##     ###     ###     ###     ##       #
 echo =====================================================================
 echo.
 
-CertUtil -hashfile "./AML4.3.1.bat" sha256
-rem CertUtil -hashfile "./AML4.3.1.bat" sha256>"SHA256_AMC4.3.1[beta].txt"
+CertUtil -hashfile "./AML4.3.1.bat" SHA256
+rem CertUtil -hashfile "./AML4.3.1.bat" SHA256 > "SHA256_AMC4.3.1[beta].txt"
 echo.
 echo Hash do arquivo salvo com sucesso em "../SHA256_AMC4.3.1[beta].txt"
 echo.
