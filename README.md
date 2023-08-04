@@ -46,6 +46,7 @@ AML's source code is maintained on Github. Follow the url bellow to clone the gi
 
 | More |
 | :--- |
+| [Releases](https://github.com/fel-dev/EasyCleanMate/releases)|
 | [Source code](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro)  |
 | [My LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev) |
 | [Ah Moleque Cleaner - Auto Download](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)
