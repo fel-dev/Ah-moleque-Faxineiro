@@ -3,11 +3,11 @@
 _old Ah Moleque Limpador BETA_
 
 Sumary
- - Apresentation
- - Binary
- - Instructions
- - Source Code
- - More
+ - [Apresentation](#Apresentation)
+ - [Binary](#Binary)
+ - [Instructions](#Instructions)
+ - [Source Code](#Source)
+ - [More](#More)
 
 ## Apresentation 
 | About|Sobre (pt-BR) |
@@ -21,7 +21,7 @@ Sumary
 
 ### Notes: **Remember to check the SHA-256 hash**
 
-### Instructions
+## Instructions
 To use:
 
 1. Right-click on the script file;
@@ -38,7 +38,7 @@ If you have any questions or need help, please [contact me](https://fel-dev.gith
 
 
 
-### Source code
+## Source code
 AML's source code is maintained on Github. Follow the url bellow to clone the git repository.
 
     git clone https://github.com/fel-dev/Ah-moleque-Faxineiro.git
