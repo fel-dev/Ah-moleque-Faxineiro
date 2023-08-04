@@ -10,14 +10,14 @@ Sumary
  - More
 
 ## Apresentation 
-About|Sobre (pt-BR)
-:---|:---
-Based on a simple script, it refers to the origins of Ccleaner -- lightweight, effective and focused entirely on computer cleaning and security. | Baseia-se em um script simples, remete-se as origens do Ccleaner -- leve, eficaz e focado inteiramente na limpeza e segurança do computador
+| About|Sobre (pt-BR) |
+| :---|:--- |
+| Based on a simple script, it refers to the origins of Ccleaner -- lightweight, effective and focused entirely on computer cleaning and security. | Baseia-se em um script simples, remete-se as origens do Ccleaner -- leve, eficaz e focado inteiramente na limpeza e segurança do computador |
 
 ## Binary
-File | SHA-256
-:-- | :--
-[ECM_4.3.2_beta.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 2704e37a42e85c40143613a479c88432fdea07ef434ca4fe2f3515930beb19ca
+| File | SHA-256 |
+| :-- | :-- |
+| [ECM_4.3.2_beta.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 2704e37a42e85c40143613a479c88432fdea07ef434ca4fe2f3515930beb19ca |
 
 ### Notes: **Remember to check the SHA-256 hash**
 
