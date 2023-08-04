@@ -33,6 +33,7 @@ To use:
 Thank you for enhancing your computer's performance with EasyCleanMate!
 
 If you liked my work and want to leave a contribution
+- ![QR Code](assets/img/QR%20Code.png)
 - PayPal: https://www.paypal.com/donate/?hosted_button_id=HSG8AZQ93493S 
 - PIX: 21965550012
 
