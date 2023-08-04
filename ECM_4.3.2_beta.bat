@@ -1,8 +1,26 @@
 @echo off 
 @echo. off
+ 
+rem final message
+set fim_txt=Thank you for enhancing your computer's performance with EasyCleanMate!
 
-set fim_txt=Faxina realizada com sucesso!
+rem progress indicator
 set /a conclusao=0
+
+set type=beta
+set version=4.3.2
+set name=ECM
+set nameVersion = %name%_%version%_%type%
+
+rem file to save output hashcode
+set "hashoutput=%nameVersion%.txt"
+
+rem command to get SHA256
+rem set "gethash=CertUtil -hashfile "\%nameVersion%.bat\" SHA256"
+
+title EasyCleanMate! %version%
+
+rem goto test_hash
 
 goto Interface
 
@@ -249,6 +267,7 @@ call :Interface
 
 
 :parte%conclusao%
+CLS
 echo  +---------------------------------------------------------------------+
 echo  [          Espere a conclusao da Limpeza de disco , isso pode demorar ]                                 
 echo  [ alguns minutos dependendo da situacao de cada computador.*          ]
@@ -265,48 +284,35 @@ call :Interface
 
 
 :parte%conclusao%
-pause
-echo teste interface
-pause
-call :Interface
-
-
-:parte%conclusao%
-pause
-echo teste interface
-pause
-call :Interface
-
-
-
-:parte%conclusao%
 CLS
-echo ====================================================================
-echo                   P R O G R A M A : A M C L E A N E R
-echo                      dev: Felipe Correa Carneiro
-echo ====================================================================
-echo     Usuario logado: %username%       Computador: %computername%	
-echo.	
-time /t
-date /t
-echo.                                                          
-echo  ##      #      ###      ##     #       # #     ###     ##       #  
-echo #       # #     # #     #       #       # #      #      # #     # # 
-echo #       # #     # #     #       #       # #      #      # #     # # 
-echo #       # #     # #     #       #       # #      #      # #     # # 
-echo  ##      #      # #      ##     ###     ###     ###     ##       #  
-echo =====================================================================
+rem:test_hash
+echo Thank you for choosing EasyCleanMate!
 echo.
-
-CertUtil -hashfile "./AML4.3.1.bat" SHA256
-rem CertUtil -hashfile "./AML4.3.1.bat" SHA256 > "SHA256_AMC4.3.1[beta].txt"
+echo ===========================
+echo     Cleaning Complete    
+echo ===========================
 echo.
-echo Hash do arquivo salvo com sucesso em "../SHA256_AMC4.3.1[beta].txt"
+echo Unlocking your PC's potential:
+echo.
+echo  ##      #      #####      ##    #       ####    #####    ####   
+echo #       # #     # # #    #   #   #       #         #      #
+echo #       # #     # # #    # ##    #       # #       #      # #
+echo #       # #     # # #    #       #       #         #      #
+echo  ##      #      # # #    #       ###     ####      #      ####
+echo.
+echo Thank you for enhancing your computer's performance with EasyCleanMate!
+echo.
+rem %gethash%
+CertUtil -hashfile ECM_4.3.2_beta.bat SHA256
+rem %gethash% > %hashoutput%
+CertUtil -hashfile ECM_4.3.2_beta.bat SHA256 > hash.txt
+echo.
+rem echo Hash do arquivo salvo com sucesso em %hashoutput%
 echo.
 echo Precione qualquer tecla para fechar.
 echo.
 MSG * %fim_txt%
-pause
+rem pause
 exit
 
 
@@ -321,21 +327,22 @@ exit
 :Interface
 CLS
 echo ====================================================================
-echo                          A M  C L E A N E R
-echo                     developed: Felipe Correa Carneiro
+echo                    P R O G R A M : E A S Y C L E A N M A T E
+echo                               Version %version%
+echo                         dev: Felipe Correa Carneiro
 echo ====================================================================
 echo.
-echo     Usuario logado: %username%       Computador: %computername%
+echo       Logged in user: %username%       Computer: %computername%	
+echo.
 echo.	
 time /t
 date /t
 echo.
-echo  Nota:
-echo  A tela pode parecer congelada algumas vezes.
+echo  Note:
+echo  The screen can frize somethimes.
 echo.
 echo                             %conclusao%%%
 echo.
 set /a conclusao=%conclusao%+1
-
-
+rem pause
 if %conclusao% equ %conclusao% goto parte%conclusao%
