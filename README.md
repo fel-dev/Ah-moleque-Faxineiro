@@ -24,11 +24,11 @@ File | SHA-256
 ### Instructions
 To use:
 
-1. Right-click on the file “AML4.3.1”;;
+1. Right-click on the script file;
 2. Select the option “Run as administrator”;
 3. Wait until the end of the cleaning.
 
-Thank you for using!
+Thank you for enhancing your computer's performance with EasyCleanMate!
 
 If you liked my work and want to leave a contribution
 - PayPal: https://www.paypal.com/donate/?hosted_button_id=HSG8AZQ93493S 
