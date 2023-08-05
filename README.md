@@ -19,7 +19,7 @@ Sumary
 
 | File | SHA-256 |
 | :-- | :-- |
-| [ECM_4.3.2_beta.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | 2704e37a42e85c40143613a479c88432fdea07ef434ca4fe2f3515930beb19ca |
+| [ECM_4.3.2_beta.bat](https://github.com/FelipeeCarneiro/Ah-moleque-Faxineiro/archive/refs/heads/main.zip)  | e52f50e339dc0422315e9ebfd8d92516c159abdd96205e003e78270f7ebed0db |
 
 ### Notes: **Remember to check the SHA-256 hash**
 
