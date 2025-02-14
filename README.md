@@ -41,9 +41,10 @@ Sumary
 
 ### To use:
 
-1. Once installed, right-click on the script file `ECM_0.4.4_beta_2025.bat`;
-2. Select the option “Run as administrator” (opicional);
-3. Wait until the end of the cleaning.
+1. Once installed, double-click on the script file `ECM.bat`;
+2. Wait until the end of the cleaning process.
+
+**Note:** The script no longer requires "Run as administrator" mode.
 
 ## Thank you for enhancing your computer's performance with EasyCleanMate!
 
