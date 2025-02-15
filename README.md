@@ -47,10 +47,10 @@ These are the specifications of the machine where Easy Clean Mate was tested and
 
 | File | hash type | hash |
 | :-- | :-- | :-- |
-| [ECM_0.4.4_beta.bat](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)    | SHA256 | 0cfcf5046845c6dba93c85d93ba9a8d5d8740bbacdab37f673141685a5978813 |
-| [ECM_0.4.4_beta.bat](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)    | SHA512 | 486643a13bcd86a7d45ccc175d3fe42227bc1845fbc3d103c32233821f3fe21a92fcac696ebae5b3a71f4b60b9617d2862e49574c0b648fe3e06bc83fe6de094 |
-| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA256 | ba14ddaf6e5aec179780f20ad210da96e7cdc86c6611e61eadbc14e1048122f7 |
-| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA512 |b657acbfc6b1e7a2f2c4f6c82fd723b7d61195b6ccf11ff99f86c519d6d487f1305670684eb67bb3377bc27eb8b8b0d687df618501faeb1f5900093a589a1733 |
+| ECM.bat    | SHA256 | 0cfcf5046845c6dba93c85d93ba9a8d5d8740bbacdab37f673141685a5978813 |
+|    | SHA512 | 486643a13bcd86a7d45ccc175d3fe42227bc1845fbc3d103c32233821f3fe21a92fcac696ebae5b3a71f4b60b9617d2862e49574c0b648fe3e06bc83fe6de094 |
+| [installer](https://github.com/fel-dev/EasyCleanMate/releases/download/0.4.4/installer.exe)         | SHA256 | ba14ddaf6e5aec179780f20ad210da96e7cdc86c6611e61eadbc14e1048122f7 |
+|          | SHA512 |b657acbfc6b1e7a2f2c4f6c82fd723b7d61195b6ccf11ff99f86c519d6d487f1305670684eb67bb3377bc27eb8b8b0d687df618501faeb1f5900093a589a1733 |
 
 
 ### Notes: **Remember to check the SHA-256 hash**
