@@ -56,8 +56,8 @@ These are the specifications of the machine where Easy Clean Mate was tested and
 ### Notes: **Remember to check the SHA-256 hash**
 | Operation Sistem | Command SHA256 | (Alternative) Command SHA512 |
 | :-- | :-- | :-- |
-| Windows | CertUtil -HashFile <file> SHA256| CertUtil -HashFile <file> SHA512 |
-| Linux | sha256sum <file> | sha512sum <file> |
+| Windows | CertUtil -HashFile "file_path" SHA256| CertUtil -HashFile "file_path" SHA512 |
+| Linux | sha256sum "file_path" | sha512sum "file_path" |
 
 ## Instructions
 
