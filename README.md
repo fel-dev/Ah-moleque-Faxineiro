@@ -1,9 +1,13 @@
-### EasyCleanMate BETA
+### Easy Clean Mate (2025-02-15) 
+_beta-0.4.4_
+
+![Logo](./assets/img/logo.png)
 
 _old Ah Moleque Limpador BETA_
 
-Sumary
+Summary
  - [Presentation](#presentation)
+ - [Requirements](#requirements)
  - [Binary](#binary)
  - [Instructions](#instructions)
  - [Source Code](#source-code)
@@ -11,9 +15,33 @@ Sumary
 
 ## Presentation 
 
-| About|Sobre (pt-BR) |
+Easy Clean Mate is a lightweight and effective tool focused entirely on computer cleaning and security. It is based on a simple script, reminiscent of the origins of Ccleaner.
+
+
+| About|Sobre |
 | :---|:--- |
-| Based on a simple script, it refers to the origins of Ccleaner -- lightweight, effective and focused entirely on computer cleaning and security. | Baseia-se em um script simples, remete-se as origens do Ccleaner -- leve, eficaz e focado inteiramente na limpeza e segurança do computador |
+| Easy Clean Mate is based on a simple script, reminiscent of the origins of Ccleaner. It is lightweight, effective, and entirely focused on computer cleaning and security. | Easy Clean Mate baseia-se em um script simples, remetendo-se às origens do Ccleaner. É leve, eficaz e focado inteiramente na limpeza e segurança do computador. |
+
+
+| Requirements | 
+| :--- |
+| Operating System: Windows 10 or 11 |
+| RAM: 4GB or more |
+| Storage: 128GB or more |
+
+## Tested On
+
+These are the specifications of the machine where Easy Clean Mate was tested and confirmed to work smoothly. However, the minimum requirements are sufficient for basic functionality.
+
+| System | Specifications |
+| :--- | :--- |
+| Operating System | Windows 11 Home 64-bit |
+| Processor | 13th Gen Intel(R) Core(TM) i7-13620H 2.40 GHz |
+| RAM | 16.0 GB DDR5-5200 |
+| Disk Space | 512Gb M.2 SSD slot (NVMe PCIe Gen4) |
+
+These are the specifications of the machine where Easy Clean Mate was tested and confirmed to work smoothly. However, the minimum requirements are sufficient for basic functionality.
+
 
 ## Binary
 
@@ -21,8 +49,8 @@ Sumary
 | :-- | :-- | :-- |
 | [ECM_0.4.4_beta.bat](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)    | SHA256 | 0cfcf5046845c6dba93c85d93ba9a8d5d8740bbacdab37f673141685a5978813 |
 | [ECM_0.4.4_beta.bat](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)    | SHA512 | 486643a13bcd86a7d45ccc175d3fe42227bc1845fbc3d103c32233821f3fe21a92fcac696ebae5b3a71f4b60b9617d2862e49574c0b648fe3e06bc83fe6de094 |
-| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA256 | f1310ce9236e45ed63dedc569699fe86f6a5cb2e4c9a6aec21dbda746a3bbaff |
-| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA512 |e2f312e3dbfdbd71c1f7c91bcd598bb26eef4e390680064039cb10c96fe1ee6116f553e54ff54453b07c98479475234e54f116859cd6e67a358e53a63013f343 |
+| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA256 | ba14ddaf6e5aec179780f20ad210da96e7cdc86c6611e61eadbc14e1048122f7 |
+| [installer.exe](https://github.com/fel-dev/EasyCleanMate/archive/refs/heads/main.zip)         | SHA512 |b657acbfc6b1e7a2f2c4f6c82fd723b7d61195b6ccf11ff99f86c519d6d487f1305670684eb67bb3377bc27eb8b8b0d687df618501faeb1f5900093a589a1733 |
 
 
 ### Notes: **Remember to check the SHA-256 hash**
@@ -71,6 +99,6 @@ AML's source code is maintained on Github. Follow the url bellow to clone the gi
 | [Source code](https://github.com/fel-dev/EasyCleanMate)  |
 | [My LinkedIn](https://www.linkedin.com/in/felipe-carneiro-dev) |
 
-It's alweys free. Enjoy!
+It's always free. Enjoy!
 
 Easy Clean Mate ☺ 2025 - Felipe Corrêa Carneiro
