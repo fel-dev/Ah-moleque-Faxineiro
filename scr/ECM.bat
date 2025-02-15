@@ -469,7 +469,7 @@ echo %timestamp% %conclusao% parte%conclusao% %part_name% >> log.txt 2>&1
 REM atualiza a barra de progresso
 set progress_bar=
 for /L %%i in (1,1,%conclusao%) do (
-    set progress_bar=!progress_bar!-
+    set progress_bar=!progress_bar!*
 )
 
 REM GetTimestamp
@@ -486,10 +486,9 @@ if %conclusao% equ %conclusao% goto parte%conclusao%
 rem ========Verificacao de Hash =======================================================
 :verify_integrity
 echo Verificando a hash do arquivo... (function)
-rem pause > nul
 
 rem Lê a hash esperada do arquivo de texto
-set /p expected_integrity=<expected_integrity
+set /p expected_integrity=<key
 
 rem Calcula a hash do arquivo atual
 for /f "tokens=*" %%i in ('certutil -hashfile "%~f0" SHA256 ^| find /i /v "certutil" ^| find /i /v "hash"') do set actual_hash=%%i
@@ -504,7 +503,6 @@ rem Continua com o script se a hash estiver correta
 echo Hash correta! Continuando com o script...
 
 echo integrity verified! >> log.txt 2>&1
-rem pause > nul
 goto :start
 
 rem ===============================================================
@@ -526,6 +524,7 @@ echo.
 pause
 exit
 
+rem Finaliza o script se o script for executado normalmente
 :eof_code1
 echo =============================================================== >> log.txt 2>&1
 echo 
